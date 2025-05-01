@@ -137,7 +137,7 @@
 
 
                     <br>
-                    <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit <?= $e['message'] ?> le
+                    <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?=  $e['message']  ?>" le
                     <?= $date ?>
                     <br>
 

@@ -4,18 +4,20 @@
   flex-direction: column;
   align-items: center;
 }
+
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 22px;
-  background-color: #d16161;
+  background-color: #1e1e2f; /* tamna pozadina */
+  color: #eaeaea; /* svetli tekst */
 }
 
 #form {
-  background-color: #954c4c;
+  background-color: #2d2d44; /* tamno ljubičasta/plava forma */
   padding: 30px 40px;
   border-top-left-radius: 400px 300px;
   border-bottom-right-radius: 400px 300px;
-  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.4);
   width: 350px;
 }
 
@@ -30,7 +32,7 @@ label,
 h1 {
   margin-top: 15px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
 }
 
 label {
@@ -54,26 +56,31 @@ label {
 input,
 textarea,
 button {
-  padding: 10px 0px 10px 10px;
+  padding: 10px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   border-radius: 5px;
   font-size: 14px;
+  background-color: #3c3c50;
+  color: #f1f1f1;
 }
+
 .fild {
   display: flex;
   align-items: center;
 }
 
+.messagesTop,
+.messagesBottom {
+  width: 50%;
+  text-align: center;
+  background-color: #2d2d44;
+  color: #eaeaea;
+}
+
 .messagesTop {
   border-top-left-radius: 400px 300px;
   border-top-right-radius: 400px 300px;
-}
-.messagesBottom,
-.messagesTop {
-  width: 50%;
-  text-align: center;
-  background-color: #954c4c;
 }
 
 .messagesBottom {
@@ -85,7 +92,7 @@ button {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #373477;
+  background-color: #4a79ff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -94,32 +101,25 @@ button {
 }
 
 button:hover {
-  background-color: #b06652;
+  background-color: #6b92ff;
 }
 
 .span {
-  color: red;
+  color: #ff6f6f;
   font-size: 12px;
 }
 
 @media only screen and (max-width: 480px) {
   #imgForm {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
   }
+
   input {
-    padding: 10px 10px 10px 35px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 10px;
     width: 100%;
   }
+
   .fild {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -127,12 +127,9 @@ button:hover {
 
 @media only screen and (max-width: 960px) {
   #imgForm {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
   }
+
   .messagesBottom,
   .messagesTop {
     width: 80%;
@@ -143,5 +140,5 @@ button:hover {
 .bar {
   height: 2px;
   width: 80%;
-  background-color: azure;
+  background-color: #999;
 }

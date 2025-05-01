@@ -1,106 +1,93 @@
-
-
-
-
 function verificationDeInput() {
     const btn = document.getElementById("btn");
 
+    const nom = document.getElementById("nomID");
+    const prenom = document.getElementById("prenomID");
+    const email = document.getElementById("emailID");
+    const tel = document.getElementById("nbPortablelID");
+    const codePostal = document.getElementById("codePostal");
+    const message = document.getElementById("messages");
 
-    const nomError = document.getElementById("nomError");
-    const prenomError = document.getElementById("prenomError");
-    const emailError = document.getElementById("emailError");
-    const telephoneError = document.getElementById("telephoneError");
-    const messageError = document.getElementById("messageError");
-    const codePostalErro = document.getElementById("codePostalError");
-
-
-
-    const emailRegex = /^([a-zA-Z0-9.-_]+)@([a-z0-9]+).([a-z]{2,3})$/;
-    const telRegex = /^((04)|\+324)([0-9]){8}$/;
-    const messageRegex = /^([a-zA-Z0-9 \+ \/ -])+$/;
-    const postRegex = /^[0-9]{4}$/;
-
-    btn.addEventListener('click', function (e) {
+    btn.addEventListener("click", function (e) {
         let isValid = true;
 
-        const inputName = document.querySelector("#nomID").value.trim();
-        const inputPrenom = document.querySelector("#prenomID").value.trim();
-        const inputEmail = document.getElementById("emailID").value.trim();
-        const inputTel = document.querySelector("#nbPortablelID").value.trim();
-        const inputMessage = document.querySelector("#messages").value.trim();
-        const inputCodePostal = document.querySelector("#codePostal").value.trim();
+        const emailRegex = /^([a-zA-Z0-9.-_]+)@([a-z0-9]+).([a-z]{2,3})$/;
+        const telRegex = /^((04)|\+324)([0-9]){8}$/;
+        const postRegex = /^[0-9]{4}$/;
+        const messageRegex = /^([a-zA-Z0-9 \+ \/ -])+$/;
 
-
-        if (inputName === "") {
-            nomError.textContent = "Nom est vide";
-            nomError.style.color = "red";
+        
+        if (nom.value.trim() === "") {
+            nom.value = "";
+            nom.placeholder = "Nom est vide";
+            nom.style.borderColor = "red";
+            nom.style.color = "red";
             isValid = false;
         } else {
-            nomError.textContent = "";
+            nom.style.borderColor = "";
+            nom.style.color = "";
+            nom.placeholder = "";
         }
 
-        if (inputPrenom === "") {
-            prenomError.textContent = "Prénom est vide";
-            prenomError.style.color = "red";
+        
+        if (prenom.value.trim() === "") {
+            prenom.value = "";
+            prenom.placeholder = "Prénom est vide";
+            prenom.style.borderColor = "red";
+            prenom.style.color = "red";
             isValid = false;
         } else {
-            prenomError.textContent = "";
+            prenom.style.borderColor = "";
+            prenom.style.color = "";
+            prenom.placeholder = "";
         }
 
-
-
-
-        if (inputCodePostal === "") {
-            codePostalErro.textContent = "CodePostal est vide";
-            codePostalErro.style.color = "red";
-            isValid = false;
-        } else if (!postRegex.test(inputCodePostal)) {
-            codePostalErro.textContent = "CodePostal n'est pas valide";
-            codePostalErro.style.color = "red";
+        if (!emailRegex.test(email.value.trim())) {
+            email.value = "";
+            email.placeholder = "Email invalide";
+            email.style.borderColor = "red";
+            email.style.color = "red";
             isValid = false;
         } else {
-            codePostalErro.textContent = "";
+            email.style.borderColor = "";
+            email.style.color = "";
+            email.placeholder = "";
         }
 
-
-
-
-        if (inputEmail === "") {
-            emailError.textContent = "Email est vide";
-            emailError.style.color = "red";
-            isValid = false;
-        } else if (!emailRegex.test(inputEmail)) {
-            emailError.textContent = "Email n'est pas valide";
-            emailError.style.color = "red";
+        if (!telRegex.test(tel.value.trim())) {
+            tel.value = "";
+            tel.placeholder = "Téléphone invalide";
+            tel.style.borderColor = "red";
+            tel.style.color = "red";
             isValid = false;
         } else {
-            emailError.textContent = "";
+            tel.style.borderColor = "";
+            tel.style.color = "";
+            tel.placeholder = "";
         }
 
-
-        if (inputTel === "") {
-            telephoneError.textContent = "Téléphone est vide";
-            telephoneError.style.color = "red";
-            isValid = false;
-        } else if (!telRegex.test(inputTel)) {
-            telephoneError.textContent = "Téléphone n'est pas valide";
-            telephoneError.style.color = "red";
+        if (!postRegex.test(codePostal.value.trim())) {
+            codePostal.value = "";
+            codePostal.placeholder = "Code postal invalide";
+            codePostal.style.borderColor = "red";
+            codePostal.style.color = "red";
             isValid = false;
         } else {
-            telephoneError.textContent = "";
+            codePostal.style.borderColor = "";
+            codePostal.style.color = "";
+            codePostal.placeholder = "";
         }
 
-
-        if (inputMessage === "") {
-            messageError.textContent = "Message est vide";
-            messageError.style.color = "red";
-            isValid = false;
-        } else if (!messageRegex.test(inputMessage)) {
-            messageError.textContent = "Message n'est pas valide";
-            messageError.style.color = "red";
+        if (!messageRegex.test(message.value.trim())) {
+            message.value = "";
+            message.placeholder = "Message invalide";
+            message.style.borderColor = "red";
+            message.style.color = "red";
             isValid = false;
         } else {
-            messageError.textContent = "";
+            message.style.borderColor = "";
+            message.style.color = "";
+            message.placeholder = "";
         }
 
         if (!isValid) {

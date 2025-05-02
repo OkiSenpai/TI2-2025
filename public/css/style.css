@@ -91,12 +91,13 @@ button {
 }
 .messageLine{
   width: 60%;
+  word-wrap: break-word;
 }
 
 .messagesTop {
   border-top-left-radius: 400px 300px;
   text-align: left;
-    padding-left: 70px;
+    padding-left: 120px;
   
 }
 

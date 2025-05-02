@@ -7,9 +7,24 @@ function verificationDeInput() {
     const tel = document.getElementById("nbPortablelID");
     const codePostal = document.getElementById("codePostal");
     const message = document.getElementById("messages");
+    const messageCounter = document.getElementById("messageCounter")
 
     const messageLen = message.value.length;
     console.log(messageLen);
+
+
+    message.addEventListener("input", function () {
+        const messageLen = message.value.length;
+        messageCounter.textContent = `${messageLen} / 300`;
+
+        if (messageLen > 300) {
+            messageCounter.style.color = "red";
+        }
+        else {
+            messageCounter.style.color = "white";
+
+        }
+    });
 
 
     btn.addEventListener("click", function (e) {
@@ -82,7 +97,7 @@ function verificationDeInput() {
             codePostal.placeholder = "";
         }
 
-        if (!messageRegex.test(message.value.trim())) {
+        if (!messageRegex.test(message.value.trim()) || messageCounter > 300) {
             message.value = "";
             message.placeholder = "Message invalide";
             message.style.borderColor = "red";

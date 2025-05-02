@@ -81,6 +81,7 @@
                         <label for="message">Message :</label>
                         <textarea id="messages" name="messages" rows="11" placeholder="Entrez votre message"></textarea>
                     </div>
+                    <span id="messageCounter"> 0 / 300</span>
                     <span class="span" id="messageError"></span>
 
                     <button type="submit" id="btn">Envoyer</button>
@@ -137,7 +138,7 @@
 
 
                     <br>
-                    <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?=  $e['message']  ?>" le
+                    <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?= $e['message'] ?>" le
                     <?= $date ?>
                     <br>
 

@@ -123,29 +123,40 @@
             <?php
             if ($a === "0") {
                 ?>
-                <div class="messagesTop">
-                    <?php
-                    $a = "1";
+                 <div class="messageContainerTop">
+                    <div class="messageLine  messagesTop">
+                        <br>
+                        <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?= $e['message'] ?>" le
+                        <?= $date ?>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                
+                <?php
+                $a = "1";
             } elseif ($a === "1") {
                 ?>
-                    <div class="messagesBottom">
+               
 
-                        <?php
-                        $a = "0";
+
+                <div class="  messageContainerBottom"     >
+                    <div class="messageLine  messagesBottom">
+                        <br>
+                        <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit " <?= $e['message'] ?> " le
+                        <?= $date ?>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <?php
+                $a = "0";
             }
 
             ?>
 
-
-                    <br>
-                    <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?= $e['message'] ?>" le
-                    <?= $date ?>
-                    <br>
-
-                    <br>
-                </div>
-                <br>
-                <?php
+            <br>
+            <?php
         endforeach;
 
         ?>
@@ -154,11 +165,11 @@
 
 
 
-        </div>
+    </div>
 
 
 
-        <script src="js/validation.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

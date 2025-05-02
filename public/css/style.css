@@ -8,12 +8,13 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 22px;
-  background-color: #1e1e2f; /* tamna pozadina */
-  color: #eaeaea; /* svetli tekst */
+  background-color: #1e1e2f; 
+  color: #eaeaea; 
+  margin: 0;
 }
 
 #form {
-  background-color: #2d2d44; /* tamno ljubičasta/plava forma */
+  background-color: #2d2d44; 
   padding: 30px 40px;
   border-top-left-radius: 400px 300px;
   border-bottom-right-radius: 400px 300px;
@@ -64,6 +65,17 @@ button {
   background-color: #3c3c50;
   color: #f1f1f1;
 }
+.messageContainerTop{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.messageContainerBottom{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+} 
 
 .fild {
   display: flex;
@@ -77,14 +89,20 @@ button {
   background-color: #2d2d44;
   color: #eaeaea;
 }
+.messageLine{
+  width: 60%;
+}
 
 .messagesTop {
   border-top-left-radius: 400px 300px;
-  border-top-right-radius: 400px 300px;
+  text-align: left;
+    padding-left: 70px;
+  
 }
 
 .messagesBottom {
-  border-bottom-left-radius: 400px 300px;
+  text-align: end;
+  padding-right: 70px;
   border-bottom-right-radius: 400px 300px;
 }
 

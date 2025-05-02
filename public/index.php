@@ -10,7 +10,7 @@ require_once "../model/guestbookModel.php";
  * Chargement des dépendances
  */
 // chargement de configuration
-require_once "../config.dev.php";
+require_once "../config.php";
 // chargement du modèle de la table guestbook
 
 

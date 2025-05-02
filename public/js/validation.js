@@ -97,7 +97,7 @@ function verificationDeInput() {
             codePostal.placeholder = "";
         }
 
-        if (!messageRegex.test(message.value.trim()) || messageCounter > 300) {
+        if (!messageRegex.test(message.value.trim()) || message.value.length > 300) {
             message.value = "";
             message.placeholder = "Message invalide";
             message.style.borderColor = "red";

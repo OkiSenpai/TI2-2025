@@ -8,6 +8,10 @@ function verificationDeInput() {
     const codePostal = document.getElementById("codePostal");
     const message = document.getElementById("messages");
 
+    const messageLen = message.value.length;
+    console.log(messageLen);
+
+
     btn.addEventListener("click", function (e) {
         let isValid = true;
 
@@ -16,7 +20,7 @@ function verificationDeInput() {
         const postRegex = /^[0-9]{4}$/;
         const messageRegex = /^([a-zA-Z0-9 \+ \/ -])+$/;
 
-        
+
         if (nom.value.trim() === "") {
             nom.value = "";
             nom.placeholder = "Nom est vide";
@@ -29,7 +33,7 @@ function verificationDeInput() {
             nom.placeholder = "";
         }
 
-        
+
         if (prenom.value.trim() === "") {
             prenom.value = "";
             prenom.placeholder = "Prénom est vide";

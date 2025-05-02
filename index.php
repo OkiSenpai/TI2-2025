@@ -1,1 +1,2 @@
-header(location: ./public/index.php);
+<?php
+header("Location: ./public/index.php");

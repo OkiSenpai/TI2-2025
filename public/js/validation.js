@@ -17,7 +17,7 @@ function verificationDeInput() {
 
     const emailRegex = /^([a-zA-Z0-9.-_]+)@([a-z0-9]+).([a-z]{2,3})$/;
     const telRegex = /^((04)|\+324)([0-9]){8}$/;
-    const messageRegex = /^([a-zA-Z0-9 \+ \/ -])+$/;
+    const messageRegex = /^([a-zA-Z0-9,! \+ \/ -])+$/;
     const postRegex = /^[0-9]{4}$/;
 
     const inputMessage = document.querySelector("#messages")

@@ -8,13 +8,13 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 22px;
-  background-color: #1e1e2f; 
-  color: #eaeaea; 
+  background-color: #1e1e2f;
+  color: #eaeaea;
   margin: 0;
 }
 
 #form {
-  background-color: #2d2d44; 
+  background-color: #2d2d44;
   padding: 30px 40px;
   border-top-left-radius: 400px 300px;
   border-bottom-right-radius: 400px 300px;
@@ -65,17 +65,17 @@ button {
   background-color: #3c3c50;
   color: #f1f1f1;
 }
-.messageContainerTop{
+.messageContainerTop {
   display: flex;
   justify-content: end;
   width: 100%;
 }
 
-.messageContainerBottom{
+.messageContainerBottom {
   display: flex;
   justify-content: start;
   width: 100%;
-} 
+}
 
 .fild {
   display: flex;
@@ -89,7 +89,7 @@ button {
   background-color: #2d2d44;
   color: #eaeaea;
 }
-.messageLine{
+.messageLine {
   width: 60%;
   word-wrap: break-word;
 }
@@ -97,8 +97,7 @@ button {
 .messagesTop {
   border-top-left-radius: 400px 300px;
   text-align: left;
-    padding-left: 120px;
-  
+  padding-left: 120px;
 }
 
 .messagesBottom {
@@ -132,19 +131,41 @@ button:hover {
   #imgForm {
     flex-direction: column;
   }
-
-  input {
-    padding: 10px;
+  .messageContainerBottom,
+  .messageContainerTop {
+    display: flex;
+    justify-content: center;
     width: 100%;
+  }
+  .messageLine {
+    padding: 0 10px;
+    width: 90%;
+    text-align: center;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  #bigImg {
+    width: 100%;
+    height: auto;
+  }
+  #form {
+    width: 270px;
   }
 
   .fild {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  .messagesBottom,
+  .messagesTop {
+    border-radius: 10px;
   }
 }
 
-@media only screen and (max-width: 960px) {
+@media screen and (min-width: 481px) and (max-width: 960px) {
   #imgForm {
     flex-direction: column;
   }
@@ -156,8 +177,55 @@ button:hover {
   }
 }
 
-.bar {
-  height: 2px;
-  width: 80%;
-  background-color: #999;
+body.darkTheme {
+  background-color: #1e1e2f;
+  color: #eaeaea;
+}
+
+body.darkTheme #form,
+body.darkTheme .messagesTop,
+body.darkTheme .messagesBottom {
+  background-color: #2d2d44;
+  color: #eaeaea;
+}
+
+body.darkTheme button {
+  background-color: #4a79ff;
+}
+
+body.darkTheme button:hover {
+  background-color: #6b92ff;
+}
+
+body.redTheme {
+  background-color: #d16161;
+
+}
+body.redTheme input , 
+body.redTheme textarea{
+  background-color: white;
+
+}
+
+body.redTheme #form,
+body.redTheme .messagesTop,
+body.redTheme .messagesBottom {
+  background-color: #954c4c;
+
+}
+
+body.redTheme button {
+  background-color: #373477;
+}
+
+body.redTheme button:hover {
+  background-color: #b06652;
+}
+
+.btnColor {
+  display: flex;
+  justify-content: flex-end;
+}
+#tbnColorChanger{
+  width: 140px;
 }

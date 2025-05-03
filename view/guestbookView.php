@@ -15,6 +15,10 @@
 </head>
 
 <body>
+    <div class="btnColor">
+        <button id="tbnColorChanger">Red</button>
+    </div>
+
 
     <div id="bigContainer">
         <?php
@@ -40,7 +44,7 @@
 
 
             <div id="img">
-                <img src="img/sign-up-amico.png" width="400px" height="400px" alt="">
+                <img id="bigImg" src="img/sign-up-amico.png" width="400px" height="400px" alt="">
 
             </div>
             <div class="formeContainer">
@@ -123,7 +127,7 @@
             <?php
             if ($a === "0") {
                 ?>
-                 <div class="messageContainerTop">
+                <div class="messageContainerTop">
                     <div class="messageLine  messagesTop">
                         <br>
                         <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit "<?= $e['message'] ?>" le
@@ -132,15 +136,15 @@
                         <br>
                     </div>
                 </div>
-                
+
                 <?php
                 $a = "1";
             } elseif ($a === "1") {
                 ?>
-               
 
 
-                <div class="  messageContainerBottom"     >
+
+                <div class="  messageContainerBottom">
                     <div class="messageLine  messagesBottom">
                         <br>
                         <strong> <?= $e['firstname'] . " " . $e['lastname'] ?> </strong> a écrit " <?= $e['message'] ?> " le
